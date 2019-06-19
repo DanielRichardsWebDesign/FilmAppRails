@@ -26,7 +26,7 @@
             </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item is-active">
+                <a class="navbar-item">
                   Home
                 </a>
                 <a class="navbar-item">
@@ -38,9 +38,9 @@
                 <span class="navbar-item">
                   <a class="button is-info is-inverted">
                     <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <i class="fa fa-sign-in"></i>
                     </span>
-                    <span>Download</span>
+                    <span>Login</span>
                   </a>
                 </span>
               </div>
@@ -52,41 +52,15 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <p class="title">
-            Title
+            <%= yield :page_title %>
           </p>
           <p class="subtitle">
-            Subtitle
+            <%= yield :page_subtitle %>
           </p>
         </div>
       </div>
+  </section>    
+  <%= yield %>
 
-      <div class="hero-foot">
-        <nav class="tabs is-boxed is-fullwidth">
-          <div class="container">
-            <ul>
-              <li class="is-active">
-                <a>Overview</a>
-              </li>
-              <li>
-                <a>Modifiers</a>
-              </li>
-              <li>
-                <a>Grid</a>
-              </li>
-              <li>
-                <a>Elements</a>
-              </li>
-              <li>
-                <a>Components</a>
-              </li>
-              <li>
-                <a>Layout</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </section>
-    <%= yield %>
   </body>
 </html>
