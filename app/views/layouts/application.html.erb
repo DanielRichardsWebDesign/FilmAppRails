@@ -11,6 +11,8 @@
 
   <body>
     <section class="hero is-info is-large">
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
@@ -25,10 +27,8 @@
               </span>
             </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
-              <div class="navbar-end">
-                <a class="navbar-item">
-                  Home
-                </a>
+              <div class="navbar-end">                
+                <%= link_to 'Home', root_path, class: 'navbar-item' %>                
                 <a class="navbar-item">
                   Examples
                 </a>
@@ -36,13 +36,19 @@
                   Documentation
                 </a>
                 <span class="navbar-item">
-                  <a class="button is-info is-inverted">
-                    <span class="icon">
-                      <i class="fa fa-sign-in"></i>
-                    </span>
-                    <span>Login</span>
-                  </a>
-                </span>
+                  <% if current_user %>
+
+                      <%= link_to 'Sign Out', destroy_user_session_path, class: 'button is-danger', method: :delete %>                                            
+
+                  <% else %>
+
+                      <%= link_to 'Login', new_user_session_path, class: 'button is-info is-inverted' %>
+                      <span class="navbar-item">                     
+                          <%= link_to 'Sign Up', new_user_registration_path, class: 'button is-success' %>
+                      </span>                       
+
+                  <% end %>
+                </span>                
               </div>
             </div>
           </div>
