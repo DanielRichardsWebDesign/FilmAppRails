@@ -38,7 +38,7 @@ gem 'simple_form', '~> 4.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
 # Flexible authentication solution for Rails with Warden
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
